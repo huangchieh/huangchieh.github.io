@@ -1,0 +1,127 @@
+<!doctype html><html lang=zh-tw dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>How to draw flowchart in Vuepress? | 時光屋</title>
+<meta name=keywords content><meta name=description content="In Vuepress we can use flowchart plugin to draw flowcharts. Here are some examples which found in this plugin&rsquo;s site.
+@flowstart st=>start: Start e=>end: End st->e @flowend @flowstart st=>start: Start e=>end: End st->e @flowend
+@flowstart process=>operation: Operation e=>end: End process->e @flowend @flowstart process=>operation: Operation e=>end: End
+process->e @flowend
+@flowstart process=>inputoutput: Inputoutput e=>end: End process->e @flowend @flowstart process=>inputoutput: Inputoutput e=>end: End
+process->e @flowend
+@flowstart process=>subroutine: Subroutine e=>end: End process->e @flowend @flowstart process=>subroutine: Subroutine e=>end: End"><meta name=author content><link rel=canonical href=https://huangchieh.github.io/posts/learn/tools/how_to_draw_flowchart_in_vuepress/><link crossorigin=anonymous href=/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z+V9+cO1A=" rel="preload stylesheet" as=style><link rel=icon href=https://huangchieh.github.io/assets/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh-tw href=https://huangchieh.github.io/posts/learn/tools/how_to_draw_flowchart_in_vuepress/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload=renderMathInElement(document.body)></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><meta property="og:title" content="How to draw flowchart in Vuepress?"><meta property="og:description" content="In Vuepress we can use flowchart plugin to draw flowcharts. Here are some examples which found in this plugin&rsquo;s site.
+@flowstart st=>start: Start e=>end: End st->e @flowend @flowstart st=>start: Start e=>end: End st->e @flowend
+@flowstart process=>operation: Operation e=>end: End process->e @flowend @flowstart process=>operation: Operation e=>end: End
+process->e @flowend
+@flowstart process=>inputoutput: Inputoutput e=>end: End process->e @flowend @flowstart process=>inputoutput: Inputoutput e=>end: End
+process->e @flowend
+@flowstart process=>subroutine: Subroutine e=>end: End process->e @flowend @flowstart process=>subroutine: Subroutine e=>end: End"><meta property="og:type" content="article"><meta property="og:url" content="https://huangchieh.github.io/posts/learn/tools/how_to_draw_flowchart_in_vuepress/"><meta property="article:section" content="posts"><meta name=twitter:card content="summary"><meta name=twitter:title content="How to draw flowchart in Vuepress?"><meta name=twitter:description content="In Vuepress we can use flowchart plugin to draw flowcharts. Here are some examples which found in this plugin&rsquo;s site.
+@flowstart st=>start: Start e=>end: End st->e @flowend @flowstart st=>start: Start e=>end: End st->e @flowend
+@flowstart process=>operation: Operation e=>end: End process->e @flowend @flowstart process=>operation: Operation e=>end: End
+process->e @flowend
+@flowstart process=>inputoutput: Inputoutput e=>end: End process->e @flowend @flowstart process=>inputoutput: Inputoutput e=>end: End
+process->e @flowend
+@flowstart process=>subroutine: Subroutine e=>end: End process->e @flowend @flowstart process=>subroutine: Subroutine e=>end: End"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://huangchieh.github.io/posts/"},{"@type":"ListItem","position":2,"name":"How to draw flowchart in Vuepress?","item":"https://huangchieh.github.io/posts/learn/tools/how_to_draw_flowchart_in_vuepress/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to draw flowchart in Vuepress?","name":"How to draw flowchart in Vuepress?","description":"In Vuepress we can use flowchart plugin to draw flowcharts. Here are some examples which found in this plugin\u0026rsquo;s site.\n@flowstart st=\u0026gt;start: Start e=\u0026gt;end: End st-\u0026gt;e @flowend @flowstart st=\u0026gt;start: Start e=\u0026gt;end: End st-\u0026gt;e @flowend\n@flowstart process=\u0026gt;operation: Operation e=\u0026gt;end: End process-\u0026gt;e @flowend @flowstart process=\u0026gt;operation: Operation e=\u0026gt;end: End\nprocess-\u0026gt;e @flowend\n@flowstart process=\u0026gt;inputoutput: Inputoutput e=\u0026gt;end: End process-\u0026gt;e @flowend @flowstart process=\u0026gt;inputoutput: Inputoutput e=\u0026gt;end: End\nprocess-\u0026gt;e @flowend\n@flowstart process=\u0026gt;subroutine: Subroutine e=\u0026gt;end: End process-\u0026gt;e @flowend @flowstart process=\u0026gt;subroutine: Subroutine e=\u0026gt;end: End","keywords":[],"articleBody":"In Vuepress we can use flowchart plugin to draw flowcharts. Here are some examples which found in this plugin’s site.\n@flowstart st=\u003estart: Start e=\u003eend: End st-\u003ee @flowend @flowstart st=\u003estart: Start e=\u003eend: End st-\u003ee @flowend\n@flowstart process=\u003eoperation: Operation e=\u003eend: End process-\u003ee @flowend @flowstart process=\u003eoperation: Operation e=\u003eend: End\nprocess-\u003ee @flowend\n@flowstart process=\u003einputoutput: Inputoutput e=\u003eend: End process-\u003ee @flowend @flowstart process=\u003einputoutput: Inputoutput e=\u003eend: End\nprocess-\u003ee @flowend\n@flowstart process=\u003esubroutine: Subroutine e=\u003eend: End process-\u003ee @flowend @flowstart process=\u003esubroutine: Subroutine e=\u003eend: End\nprocess-\u003ee @flowend\n@flowstart cond=\u003econdition: Process? process=\u003eoperation: Process e=\u003eend: End cond(yes)-\u003eprocess-\u003ee cond(no)-\u003ee @flowend @flowstart cond=\u003econdition: Process? process=\u003eoperation: Process e=\u003eend: End\ncond(yes)-\u003eprocess-\u003ee cond(no)-\u003ee @flowend\n@flowstart para=\u003eparallel: parallel tasks process=\u003eoperation: Process e=\u003eend: End para(path1, bottom)-\u003eprocess-\u003ee para(path2)-\u003ee @flowend @flowstart para=\u003eparallel: parallel tasks process=\u003eoperation: Process e=\u003eend: End\npara(path1, bottom)-\u003eprocess-\u003ee para(path2)-\u003ee @flowend\n@flowstart stage1=\u003eoperation: Stage 1 stage2=\u003eoperation: Stage 2 stage3=\u003eoperation: Stage 3 stage1-\u003estage2-\u003estage3 @flowend @flowstart stage1=\u003eoperation: Stage 1 stage2=\u003eoperation: Stage 2 stage3=\u003eoperation: Stage 3\nstage1-\u003estage2-\u003estage3 @flowend\n@flowstart st=\u003estart: Start|past:\u003ehttp://www.google.com[blank] e=\u003eend: End|future:\u003ehttp://www.google.com op1=\u003eoperation: My Operation|past op2=\u003eoperation: Stuff|current sub1=\u003esubroutine: My Subroutine|invalid cond=\u003econdition: Yes or No?|approved:\u003ehttp://www.google.com c2=\u003econdition: Good idea|rejected io=\u003einputoutput: catch something...|future st-\u003eop1(right)-\u003econd cond(yes, right)-\u003ec2 cond(no)-\u003esub1(left)-\u003eop1 c2(yes)-\u003eio-\u003ee c2(no)-\u003eop2-\u003ee @flowend @flowstart st=\u003estart: Start|past:\u003ehttp://www.google.com[blank] e=\u003eend: End|future:\u003ehttp://www.google.com op1=\u003eoperation: My Operation|past op2=\u003eoperation: Stuff|current sub1=\u003esubroutine: My Subroutine|invalid cond=\u003econdition: Yes or No?|approved:\u003ehttp://www.google.com c2=\u003econdition: Good idea|rejected io=\u003einputoutput: catch something…|future\nst-\u003eop1(right)-\u003econd cond(yes, right)-\u003ec2 cond(no)-\u003esub1(left)-\u003eop1 c2(yes)-\u003eio-\u003ee c2(no)-\u003eop2-\u003ee @flowend\nPretty cool. 💁‍♂️\n","wordCount":"207","inLanguage":"zh-tw","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://huangchieh.github.io/posts/learn/tools/how_to_draw_flowchart_in_vuepress/"},"publisher":{"@type":"Organization","name":"時光屋","logo":{"@type":"ImageObject","url":"https://huangchieh.github.io/assets/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://huangchieh.github.io/ accesskey=h title="時光屋 (Alt + H)">時光屋</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">How to draw flowchart in Vuepress?</h1><div class=post-meta></div></header><div class=post-content><p>In Vuepress we can use flowchart plugin to draw flowcharts.
+Here are some examples which found in this plugin&rsquo;s
+<a href=https://flowchart.vuepress.ulivz.com/>site</a>.</p><pre tabindex=0><code>@flowstart
+st=&gt;start: Start
+e=&gt;end: End
+st-&gt;e
+@flowend
+</code></pre><p>@flowstart
+st=>start: Start
+e=>end: End
+st->e
+@flowend</p><pre tabindex=0><code>@flowstart
+process=&gt;operation: Operation
+e=&gt;end: End
+
+process-&gt;e
+@flowend
+</code></pre><p>@flowstart
+process=>operation: Operation
+e=>end: End</p><p>process->e
+@flowend</p><pre tabindex=0><code>@flowstart
+process=&gt;inputoutput: Inputoutput
+e=&gt;end: End
+
+process-&gt;e
+@flowend
+</code></pre><p>@flowstart
+process=>inputoutput: Inputoutput
+e=>end: End</p><p>process->e
+@flowend</p><pre tabindex=0><code>@flowstart
+process=&gt;subroutine: Subroutine
+e=&gt;end: End
+
+process-&gt;e
+@flowend
+</code></pre><p>@flowstart
+process=>subroutine: Subroutine
+e=>end: End</p><p>process->e
+@flowend</p><pre tabindex=0><code>@flowstart
+cond=&gt;condition: Process?
+process=&gt;operation: Process
+e=&gt;end: End
+
+cond(yes)-&gt;process-&gt;e
+cond(no)-&gt;e
+@flowend
+</code></pre><p>@flowstart
+cond=>condition: Process?
+process=>operation: Process
+e=>end: End</p><p>cond(yes)->process->e
+cond(no)->e
+@flowend</p><pre tabindex=0><code>@flowstart
+para=&gt;parallel: parallel tasks
+process=&gt;operation: Process
+e=&gt;end: End
+
+para(path1, bottom)-&gt;process-&gt;e
+para(path2)-&gt;e
+@flowend
+</code></pre><p>@flowstart
+para=>parallel: parallel tasks
+process=>operation: Process
+e=>end: End</p><p>para(path1, bottom)->process->e
+para(path2)->e
+@flowend</p><pre tabindex=0><code>@flowstart
+stage1=&gt;operation: Stage 1
+stage2=&gt;operation: Stage 2
+stage3=&gt;operation: Stage 3
+
+stage1-&gt;stage2-&gt;stage3
+@flowend
+</code></pre><p>@flowstart
+stage1=>operation: Stage 1
+stage2=>operation: Stage 2
+stage3=>operation: Stage 3</p><p>stage1->stage2->stage3
+@flowend</p><pre tabindex=0><code>@flowstart
+st=&gt;start: Start|past:&gt;http://www.google.com[blank]
+e=&gt;end: End|future:&gt;http://www.google.com
+op1=&gt;operation: My Operation|past
+op2=&gt;operation: Stuff|current
+sub1=&gt;subroutine: My Subroutine|invalid
+cond=&gt;condition: Yes
+or No?|approved:&gt;http://www.google.com
+c2=&gt;condition: Good idea|rejected
+io=&gt;inputoutput: catch something...|future
+
+st-&gt;op1(right)-&gt;cond
+cond(yes, right)-&gt;c2
+cond(no)-&gt;sub1(left)-&gt;op1
+c2(yes)-&gt;io-&gt;e
+c2(no)-&gt;op2-&gt;e
+@flowend
+</code></pre><p>@flowstart
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End|future:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something&mldr;|future</p><p>st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+@flowend</p><p>Pretty cool. 💁‍♂️</p></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://huangchieh.github.io/>時光屋</a></span>
+<span>由 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> 和 <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a> 驅動</span></footer><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
