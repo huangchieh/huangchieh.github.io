@@ -1,0 +1,131 @@
+<!doctype html><html lang=zh-tw dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>How to import to Anki from CSV file？ | 時光屋</title>
+<meta name=keywords content><meta name=description content="[[toc]]
+The year before last, I made a repository called BulkImportToAnki on Github. Until tody, I found there was a issue opened on Dec 22 2018. I&rsquo;m very sorry for I didn&rsquo;t notice this, and sorry for I didn&rsquo;t write any documents about this repository. So this is the reason I write this article.
+Long long time ago, I got a PDF file， which contains 100 sentences for IELTS from my classmate."><meta name=author content><link rel=canonical href=https://huangchieh.github.io/posts/learn/tools/how_to_import_to_anki_from_csv/><link crossorigin=anonymous href=/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z+V9+cO1A=" rel="preload stylesheet" as=style><link rel=icon href=https://huangchieh.github.io/assets/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://huangchieh.github.io/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh-tw href=https://huangchieh.github.io/posts/learn/tools/how_to_import_to_anki_from_csv/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload=renderMathInElement(document.body)></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><meta property="og:title" content="How to import to Anki from CSV file？"><meta property="og:description" content="[[toc]]
+The year before last, I made a repository called BulkImportToAnki on Github. Until tody, I found there was a issue opened on Dec 22 2018. I&rsquo;m very sorry for I didn&rsquo;t notice this, and sorry for I didn&rsquo;t write any documents about this repository. So this is the reason I write this article.
+Long long time ago, I got a PDF file， which contains 100 sentences for IELTS from my classmate."><meta property="og:type" content="article"><meta property="og:url" content="https://huangchieh.github.io/posts/learn/tools/how_to_import_to_anki_from_csv/"><meta property="article:section" content="posts"><meta name=twitter:card content="summary"><meta name=twitter:title content="How to import to Anki from CSV file？"><meta name=twitter:description content="[[toc]]
+The year before last, I made a repository called BulkImportToAnki on Github. Until tody, I found there was a issue opened on Dec 22 2018. I&rsquo;m very sorry for I didn&rsquo;t notice this, and sorry for I didn&rsquo;t write any documents about this repository. So this is the reason I write this article.
+Long long time ago, I got a PDF file， which contains 100 sentences for IELTS from my classmate."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://huangchieh.github.io/posts/"},{"@type":"ListItem","position":2,"name":"How to import to Anki from CSV file？","item":"https://huangchieh.github.io/posts/learn/tools/how_to_import_to_anki_from_csv/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to import to Anki from CSV file？","name":"How to import to Anki from CSV file？","description":"[[toc]]\nThe year before last, I made a repository called BulkImportToAnki on Github. Until tody, I found there was a issue opened on Dec 22 2018. I\u0026rsquo;m very sorry for I didn\u0026rsquo;t notice this, and sorry for I didn\u0026rsquo;t write any documents about this repository. So this is the reason I write this article.\nLong long time ago, I got a PDF file， which contains 100 sentences for IELTS from my classmate.","keywords":[],"articleBody":"[[toc]]\nThe year before last, I made a repository called BulkImportToAnki on Github. Until tody, I found there was a issue opened on Dec 22 2018. I’m very sorry for I didn’t notice this, and sorry for I didn’t write any documents about this repository. So this is the reason I write this article.\nLong long time ago, I got a PDF file， which contains 100 sentences for IELTS from my classmate. I didn’t think that’s a good idea to memorize all this by reading this file directly.\nI knew Anki is good for memorizing. But how to convert this PDF to cards thatsupport in Anki? Here was a solution I discovered:\n@flowstart st=\u003estart: Start stage1=\u003eoperation: Extract text from PDF stage2=\u003eoperation: Split the text and save a CSV file stage3=\u003eoperation: Import the CSV file to Anki e=\u003eend: End\nst-\u003estage1-\u003estage2-\u003estage3-\u003ee @flowend\nStart: Install pdftotext I decided to use Python to deal with this. I followed this, and installed pdftotext, which can extract text from PDF file.\nExtract text from PDF I could extract text from my pdf file by using:\nimport pdftotext # Load your PDF with open(\"100_sentences.pdf\", \"rb\") as f: pdf = pdftotext.PDF(f) # Iterate over all the pages pages = [] for page in pdf: pages.append(page) print(pages[0]) print(pages[1]) ::: details Output\n7000 雅思词汇用 100 个句子记完！ 100 套真题中提炼而出的 100 百个经典句子，包涵了 7000 个雅思词汇。 1. Typical of the grassland dwellers of the continent is the American antelope, or pronghorn. 1.美洲羚羊，或称叉角羚，是该大陆典型的草原动物。 2. Of the millions who saw Haley’s comet in 1986, how many people will live long enough to see it return in the twenty-first century. 2. 1986 年看见哈雷慧星的千百万人当中，有多少人能够长寿到足以目睹它在二十一世纪 的回归呢？ 3. Anthropologists have discovered that fear, happiness, sadness, and surprise are universally reflected in facial expressions. 3.人类学家们已经发现，恐惧，快乐，悲伤和惊奇都会行之于色，这在全人类是共通的。 4. Because of its irritating effect on humans, the use of phenol as a general antiseptic has been largely discontinued. 4.由于苯酚对人体带有刺激性作用，它基本上已不再被当作常用的防腐剂了。 5. In group to remain in existence, a profit-making organization must, in the long run, produce something consumers consider useful or desirable. 5.任何盈利组织若要生存，最终都必须生产出消费者可用或需要的产品。 6. The greater the population there is in a locality; the greater the need there is for water, transportation, and disposal of refuse. 6.一个地方的人口越多，其对水，交通和垃圾处理的需求就会越大。 7. It is more difficult to write simply, directly, and effectively than to employ flowery but vague expressions that only obscure one’s meaning. 7.简明，直接，有力的写作难于花哨，含混而意义模糊的表达。 1 / 16 8. With modern offices becoming more mechanized, designers are attempting to personalize them with warmer, less severe interiors. 8.随着现代办公室的日益自动化，设计师们正试图利用较为温暖而不太严肃的内部装饰来使 其具有亲切感。 9. The difference between libel and slander is that libel is printed while slander is spoken. 9.诽谤和流言的区别在于前者是书面的，而后者是口头的。 10. The knee is the joints where the thigh bone meets the large bone of the lower leg. 10.膝盖是大腿骨和小腿胫的连接处。 11. Acids are chemical compounds that, in water solution, have a sharp taste, a corrosive action on metals, and the ability to turn certain blue vegetable dyes red. 11.酸是一种化合物，它在溶于水时具有强烈的气味和对金属的腐蚀性，并且能够使某些蓝 色植物染料变红。 12. Billie Holiday’s reputation as a great jazz-blues singer rests on her ability to give emotional depth to her songs. 12. Billie Holiday’s 作为一个爵士布鲁斯乐杰出歌手的名声建立在能够赋予歌曲感情深度 的能力。 13. Essentially, a theory is an abstract, symbolic representation of what is conceived to be reality. 13.理论在本质上是对认识了的现实的一种抽象和符号化的表达。 14. Long before children are able to speak or understand a language, they communicate through facial expressions and by making noises. 14.儿童在能说或能听懂语言之前，很久就会通过面部表情和靠发出噪声来与人交流了。 2 / 16 :::\nHere came to the question: ::: tip How to get the information I need?\nI need all those pair sentences of Chinese and English. I don’t need the first two lines at the begin in the first pages. the numbers on the foot of each page like ‘1 / 16, 2 / 16’. ::: Split the text and save a CSV file ::: details All code\nimport pdftotext # Load your PDF with open(\"100_sentences.pdf\", \"rb\") as f: pdf = pdftotext.PDF(f) # Iterate over all the pages pages = '' for page in pdf: # Remove page number page = page[:-10] # Remove all '\\n' and extra space page = page.replace('\\n', '').strip() pages += page print(pages) import re text = re.split('[0-9]+\\.', pages)[1:] print(text) pairs_list = [] counter = 0 for i in range(len(text)): # print(sentence[i]) if i%2 == 1: # pairs_list.append((li[i-1].replace('\\n',''),li[i].replace('\\n',''))) pairs_list.append((text[i-1],text[i])) counter +=1 for pair in pairs_list: print(pair,'\\n') import pandas as pd df = pd.DataFrame(pairs_list,columns=['Front','Back']) # print(df) df.to_csv('DataExportToAnki.csv', encoding='utf-8') # It's not elegant I knew, but it worked. :::\nSo that , I converted the PDF to a csv file, which could be import to Anki easily.\nImport the CSV file to Anki In my computer, I opened Anki-\u003e File -\u003e Import, and then chose the csv file I made. Because the first colum was number field, so I ignored Field 1. I’m not sure whether or not a csv file could be imported to the mobile Anki directly. Even so, you can export a package using Anki-\u003e File -\u003e Export, and import to your phone.\nThank for reading. If you have any questions, leave comments below.\n","wordCount":"800","inLanguage":"zh-tw","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://huangchieh.github.io/posts/learn/tools/how_to_import_to_anki_from_csv/"},"publisher":{"@type":"Organization","name":"時光屋","logo":{"@type":"ImageObject","url":"https://huangchieh.github.io/assets/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://huangchieh.github.io/ accesskey=h title="時光屋 (Alt + H)">時光屋</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">How to import to Anki from CSV file？</h1><div class=post-meta></div></header><div class=post-content><p>[[toc]]</p><p>The year before last, I made a repository called <a href=https://github.com/HuangJiaLian/BulkImportToAnki>BulkImportToAnki</a>
+on Github. Until tody, I found there was a <a href=https://github.com/HuangJiaLian/BulkImportToAnki/issues/1>issue</a>
+opened on Dec 22 2018. I&rsquo;m very sorry for I didn&rsquo;t notice this, and sorry for I
+didn&rsquo;t write any documents about this repository. So this is the reason I write
+this article.</p><p>Long long time ago, I got a PDF file， which contains 100 sentences for IELTS from my
+classmate. I didn&rsquo;t think that&rsquo;s a good idea to memorize all this by reading this file directly.</p><p>I knew <a href=https://apps.ankiweb.net/#download>Anki</a> is good for memorizing.
+But how to convert this PDF to cards thatsupport in Anki?
+Here was a solution I discovered:</p><p>@flowstart
+st=>start: Start
+stage1=>operation: Extract text from PDF
+stage2=>operation: Split the text and save a CSV file
+stage3=>operation: Import the CSV file to Anki
+e=>end: End</p><p>st->stage1->stage2->stage3->e
+@flowend</p><h2 id=start-install-pdftotext>Start: Install pdftotext<a hidden class=anchor aria-hidden=true href=#start-install-pdftotext>#</a></h2><p>I decided to use Python to deal with this. I followed <a href=https://pypi.org/project/pdftotext/>this</a>,
+and installed <code>pdftotext</code>, which can extract text from PDF file.</p><h2 id=extract-text-from-pdf>Extract text from PDF<a hidden class=anchor aria-hidden=true href=#extract-text-from-pdf>#</a></h2><p>I could extract text from my pdf file by using:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> pdftotext
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Load your PDF</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> open(<span style=color:#e6db74>&#34;100_sentences.pdf&#34;</span>, <span style=color:#e6db74>&#34;rb&#34;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>    pdf <span style=color:#f92672>=</span> pdftotext<span style=color:#f92672>.</span>PDF(f)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Iterate over all the pages</span>
+</span></span><span style=display:flex><span>pages <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> page <span style=color:#f92672>in</span> pdf:
+</span></span><span style=display:flex><span>    pages<span style=color:#f92672>.</span>append(page)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(pages[<span style=color:#ae81ff>0</span>])
+</span></span><span style=display:flex><span>print(pages[<span style=color:#ae81ff>1</span>])
+</span></span></code></pre></div><p>::: details Output</p><pre tabindex=0><code>               7000 雅思词汇用 100 个句子记完！
+100 套真题中提炼而出的 100 百个经典句子，包涵了 7000 个雅思词汇。
+1. Typical of the grassland dwellers of the continent is the American antelope, or
+pronghorn.
+1.美洲羚羊，或称叉角羚，是该大陆典型的草原动物。
+2. Of the millions who saw Haley’s comet in 1986, how many people will live long
+enough to see it return in the twenty-first century.
+2. 1986 年看见哈雷慧星的千百万人当中，有多少人能够长寿到足以目睹它在二十一世纪
+的回归呢？
+3. Anthropologists have discovered that fear, happiness, sadness, and surprise
+are universally reflected in facial expressions.
+3.人类学家们已经发现，恐惧，快乐，悲伤和惊奇都会行之于色，这在全人类是共通的。
+4. Because of its irritating effect on humans, the use of phenol as a general
+antiseptic has been largely discontinued.
+4.由于苯酚对人体带有刺激性作用，它基本上已不再被当作常用的防腐剂了。
+5. In group to remain in existence, a profit-making organization must, in the
+long run, produce something consumers consider useful or desirable.
+5.任何盈利组织若要生存，最终都必须生产出消费者可用或需要的产品。
+6. The greater the population there is in a locality; the greater the need there is
+for water, transportation, and disposal of refuse.
+6.一个地方的人口越多，其对水，交通和垃圾处理的需求就会越大。
+7. It is more difficult to write simply, directly, and effectively than to employ
+flowery but vague expressions that only obscure one’s meaning.
+7.简明，直接，有力的写作难于花哨，含混而意义模糊的表达。
+                                         1 / 16
+</code></pre><pre tabindex=0><code>8. With modern offices becoming more mechanized, designers are attempting
+to personalize them with warmer, less severe interiors.
+8.随着现代办公室的日益自动化，设计师们正试图利用较为温暖而不太严肃的内部装饰来使
+其具有亲切感。
+9. The difference between libel and slander is that libel is printed while slander
+is spoken.
+9.诽谤和流言的区别在于前者是书面的，而后者是口头的。
+10. The knee is the joints where the thigh bone meets the large bone of the
+lower leg.
+10.膝盖是大腿骨和小腿胫的连接处。
+11. Acids are chemical compounds that, in water solution, have a sharp taste, a
+corrosive action on metals, and the ability to turn certain blue vegetable dyes
+red.
+11.酸是一种化合物，它在溶于水时具有强烈的气味和对金属的腐蚀性，并且能够使某些蓝
+色植物染料变红。
+12. Billie Holiday’s reputation as a great jazz-blues singer rests on her ability to
+give emotional depth to her songs.
+12. Billie Holiday’s 作为一个爵士布鲁斯乐杰出歌手的名声建立在能够赋予歌曲感情深度
+的能力。
+13. Essentially, a theory is an abstract, symbolic representation of what is
+conceived to be reality.
+13.理论在本质上是对认识了的现实的一种抽象和符号化的表达。
+14. Long before children are able to speak or understand a language, they
+communicate through facial expressions and by making noises.
+14.儿童在能说或能听懂语言之前，很久就会通过面部表情和靠发出噪声来与人交流了。
+                                        2 / 16
+</code></pre><p>:::</p><p>Here came to the question:
+::: tip How to get the information I need?</p><ol><li>I need all those pair sentences of Chinese and English.</li><li>I don&rsquo;t need<ul><li>the first two lines at the begin in the first pages.</li><li>the numbers on the foot of each page like &lsquo;1 / 16, 2 / 16&rsquo;.
+:::</li></ul></li></ol><h2 id=split-the-text-and-save-a-csv-file>Split the text and save a CSV file<a hidden class=anchor aria-hidden=true href=#split-the-text-and-save-a-csv-file>#</a></h2><p>::: details All code</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> pdftotext
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Load your PDF</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> open(<span style=color:#e6db74>&#34;100_sentences.pdf&#34;</span>, <span style=color:#e6db74>&#34;rb&#34;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>    pdf <span style=color:#f92672>=</span> pdftotext<span style=color:#f92672>.</span>PDF(f)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Iterate over all the pages</span>
+</span></span><span style=display:flex><span>pages <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> page <span style=color:#f92672>in</span> pdf:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Remove page number</span>
+</span></span><span style=display:flex><span>    page <span style=color:#f92672>=</span> page[:<span style=color:#f92672>-</span><span style=color:#ae81ff>10</span>]
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Remove all &#39;\n&#39; and extra space</span>
+</span></span><span style=display:flex><span>    page <span style=color:#f92672>=</span> page<span style=color:#f92672>.</span>replace(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>)<span style=color:#f92672>.</span>strip()
+</span></span><span style=display:flex><span>    pages <span style=color:#f92672>+=</span> page
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(pages)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> re 
+</span></span><span style=display:flex><span>text <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;[0-9]+\.&#39;</span>, pages)[<span style=color:#ae81ff>1</span>:]
+</span></span><span style=display:flex><span>print(text)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>pairs_list <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>counter <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(text)):
+</span></span><span style=display:flex><span>    <span style=color:#75715e># print(sentence[i])</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> i<span style=color:#f92672>%</span><span style=color:#ae81ff>2</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># pairs_list.append((li[i-1].replace(&#39;\n&#39;,&#39;&#39;),li[i].replace(&#39;\n&#39;,&#39;&#39;)))</span>
+</span></span><span style=display:flex><span>        pairs_list<span style=color:#f92672>.</span>append((text[i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>],text[i]))
+</span></span><span style=display:flex><span>    counter <span style=color:#f92672>+=</span><span style=color:#ae81ff>1</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> pair <span style=color:#f92672>in</span> pairs_list:
+</span></span><span style=display:flex><span>    print(pair,<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd 
+</span></span><span style=display:flex><span>df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame(pairs_list,columns<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;Front&#39;</span>,<span style=color:#e6db74>&#39;Back&#39;</span>])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># print(df)</span>
+</span></span><span style=display:flex><span>df<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;DataExportToAnki.csv&#39;</span>, encoding<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;utf-8&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># It&#39;s not elegant I knew, but it worked.</span>
+</span></span></code></pre></div><p>:::</p><p>So that , I converted the PDF to a csv file, which could be import to Anki easily.</p><h2 id=import-the-csv-file-to-anki>Import the CSV file to Anki<a hidden class=anchor aria-hidden=true href=#import-the-csv-file-to-anki>#</a></h2><p>In my computer, I opened <code>Anki-> File -> Import</code>, and then chose the csv file I made.
+Because the first colum was number field, so I ignored Field 1.</p><p>I&rsquo;m not sure whether or not a csv file could be imported to the mobile Anki directly.
+Even so, you can export a package using <code>Anki-> File -> Export</code>, and import to your phone.</p><p>Thank for reading. If you have any questions, leave comments below.</p></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://huangchieh.github.io/>時光屋</a></span>
+<span>由 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> 和 <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a> 驅動</span></footer><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
